@@ -1,36 +1,31 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
-<section>
-  <div class="example-label">Basic</div>
-  <div class="example-button-row">
-    <button mat-button>Basic</button>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warn</button>
-    <button mat-button disabled>Disabled</button>
-    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Raised</div>
-  <div class="example-button-row">
-    <button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
-    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Stroked</div>
-  <div class="example-button-row">
-    <button mat-stroked-button>Basic</button>
-    <button mat-stroked-button color="primary">Primary</button>
-    <button mat-stroked-button color="accent">Accent</button>
-    <button mat-stroked-button color="warn">Warn</button>
-    <button mat-stroked-button disabled>Disabled</button>
-    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-</section>
+<mat-tab-group #tabGroup="matTabGroup">
+    <mat-tab >
+
+        <ng-template mat-tab-label>
+
+            <mat-icon>
+                inventory_2
+            </mat-icon>
+                Produtos
+        </ng-template>
+
+        <mat-card >
+<app-product></app-product>
+        </mat-card>
+    </mat-tab>
+
+    <mat-tab>
+
+        <ng-template mat-tab-label>
+
+            <mat-icon>
+                account_circle
+            </mat-icon>
+                Clientes
+        </ng-template>
+
+ <mat-card>     
+<app-customer></app-customer>
+</mat-card>  
+</mat-tab>
+</mat-tab-group>
